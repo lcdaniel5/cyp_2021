@@ -1,0 +1,99 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyP5mvQWn49W5s9C2Mkm2B5Q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/lcdaniel5/cyp_2021/blob/main/tarea%204\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Do2OsKU6IwTC",
+        "outputId": "c2561f6b-76c0-4a80-ad41-93b58639535b"
+      },
+      "source": [
+        "sue = 0\n",
+        "sue = float(input(\"ingrese el sueldo \"))\n",
+        "\n",
+        "if (sue <= 1000):\n",
+        "  suea = ((sue / 100) * 15) + sue\n",
+        "  print(f\"el sueldo del trabajor con el aumento es ${suea:.2f}\")\n",
+        "else:\n",
+        " suea = ((sue / 100) * 12) + sue\n",
+        " print(f\"el sueldo del trabajor con el aumento es ${suea:.2f}\")"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "ingrese el sueldo 400\n",
+            "el sueldo del trabajor con el aumento es $460.00\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xu-ejRbBI7Bz",
+        "outputId": "72ad445c-e29c-4c3a-bc61-c74602923b0c"
+      },
+      "source": [
+        "cat = int(input(\"ingrese la categoria del trabajador \"))\n",
+        "sue = float(input(\"ingrese el sueldo del trabajador \"))\n",
+        "\n",
+        "if (cat == 1):\n",
+        "  suea = ((sue / 100) * 15) + sue\n",
+        "  print(f\"el sueldo del trabajor categoria {cat} con el aumento es ${suea:.2f}\")\n",
+        "elif (cat == 2):\n",
+        "  suea = ((sue / 100) * 10) + sue\n",
+        "  print(f\"el sueldo del trabajor categoria {cat} con el aumento es ${suea:.2f}\")\n",
+        "elif (cat == 3):\n",
+        "  suea = ((sue / 100) * 8) + sue\n",
+        "  print(f\"el sueldo del trabajor categoria {cat} con el aumento es ${suea:.2f}\")\n",
+        "elif (cat == 4):\n",
+        "  suea = ((sue / 100) * 7) + sue\n",
+        "  print(f\"el sueldo del trabajor categoria {cat} con el aumento es ${suea:.2f}\")"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "ingrese la categoria del trabajador 4\n",
+            "ingrese el sueldo del trabajador 5000\n",
+            "el sueldo del trabajor categoria 4 con el aumento es $5350.00\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
