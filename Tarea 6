@@ -1,0 +1,751 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPo5H/f8x4FGwJT5UhKbjkF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/lcdaniel5/cyp_2021/blob/main/Tarea%206\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "69XaKyHyYqR2",
+        "outputId": "7f3e9ce6-5655-4b36-8b32-95c05d6aad4c"
+      },
+      "source": [
+        "Serie = 0\r\n",
+        "\r\n",
+        "N = int(input(\"Colocar el numero N\\n\"))\r\n",
+        "\r\n",
+        "Band = True\r\n",
+        "I = 1\r\n",
+        "\r\n",
+        "while ( I <= N ):\r\n",
+        "  if (Band == True):\r\n",
+        "    Serie = Serie + 1/I\r\n",
+        "    Band = False\r\n",
+        "  else:\r\n",
+        "    Serie = Serie - 1/I\r\n",
+        "    Band = True\r\n",
+        "  I = I + 1\r\n",
+        "\r\n",
+        "print(Serie)"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Colocar el numero N\n",
+            "1\n",
+            "1.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 629
+        },
+        "id": "Q3Wo_28VY8sF",
+        "outputId": "c970442a-413f-4cc9-cb08-01f79c65ff04"
+      },
+      "source": [
+        "nom=0\r\n",
+        "sue= float (input(\"Ingrese su sueldo \\n $\"))\r\n",
+        "while (sue!=-1):\r\n",
+        "  if (sue<=1000):\r\n",
+        "    nsue=sue*1.15\r\n",
+        "    \r\n",
+        "  else:\r\n",
+        "    nsue=sue*1.12\r\n",
+        "\r\n",
+        "  print(f\"Su nuevo sueldo es de $\",nsue)  \r\n",
+        "  nom=nom+nsue\r\n",
+        "  sue= float (input(\"Ingrese su sueldo\\n $\"))\r\n",
+        "\r\n",
+        "print(\"La nomina empresarial es de $\",nom)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Ingrese su sueldo \n",
+            " $5000\n",
+            "Su nuevo sueldo es de $ 5600.000000000001\n",
+            "Ingrese su sueldo\n",
+            " $5600\n",
+            "Su nuevo sueldo es de $ 6272.000000000001\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    728\u001b[0m             \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 729\u001b[0;31m                 \u001b[0mident\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreply\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msession\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstdin_socket\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    730\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/jupyter_client/session.py\u001b[0m in \u001b[0;36mrecv\u001b[0;34m(self, socket, mode, content, copy)\u001b[0m\n\u001b[1;32m    802\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 803\u001b[0;31m             \u001b[0mmsg_list\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msocket\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv_multipart\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmode\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    804\u001b[0m         \u001b[0;32mexcept\u001b[0m \u001b[0mzmq\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mZMQError\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/sugar/socket.py\u001b[0m in \u001b[0;36mrecv_multipart\u001b[0;34m(self, flags, copy, track)\u001b[0m\n\u001b[1;32m    565\u001b[0m         \"\"\"\n\u001b[0;32m--> 566\u001b[0;31m         \u001b[0mparts\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mflags\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtrack\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtrack\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    567\u001b[0m         \u001b[0;31m# have first part already, only loop while more to receive\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket._recv_copy\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/backend/cython/checkrc.pxd\u001b[0m in \u001b[0;36mzmq.backend.cython.checkrc._check_rc\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: ",
+            "\nDuring handling of the above exception, another exception occurred:\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-3-619d7e724ed7>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     10\u001b[0m   \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"Su nuevo sueldo es de $\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mnsue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m   \u001b[0mnom\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mnom\u001b[0m\u001b[0;34m+\u001b[0m\u001b[0mnsue\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 12\u001b[0;31m   \u001b[0msue\u001b[0m\u001b[0;34m=\u001b[0m \u001b[0mfloat\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Ingrese su sueldo\\n $\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     13\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     14\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"La nomina empresarial es de $\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mnom\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    702\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    703\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 704\u001b[0;31m             \u001b[0mpassword\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mFalse\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    705\u001b[0m         )\n\u001b[1;32m    706\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    732\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    733\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 734\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    735\u001b[0m             \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    736\u001b[0m                 \u001b[0;32mbreak\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4GwleInfY_ow",
+        "outputId": "0ef91365-e9c5-4be0-9689-ba6a53e6b524"
+      },
+      "source": [
+        "sumotr=0\r\n",
+        "sumpos=0\r\n",
+        "cuepos=0\r\n",
+        "n= int (input(\"Ingrese la cantidad de números que desea sumar\\n\"))\r\n",
+        "i=1\r\n",
+        "for i in range (n):\r\n",
+        "  num = int (input(f\"Ingrese el número {i+1}° \\n\"))\r\n",
+        "  if (num>0):\r\n",
+        "    sumpos=sumpos+num\r\n",
+        "    cuepos=cuepos+1 \r\n",
+        "    \r\n",
+        "  else:\r\n",
+        "    sumotr=sumotr+num\r\n",
+        "   \r\n",
+        "  i=i+1\r\n",
+        "\r\n",
+        "progen=(sumpos+sumotr)/n\r\n",
+        "propos=(sumpos/cuepos)\r\n",
+        "\r\n",
+        "print(\"La cantidad de números positivos que ingreso fue de:\",cuepos)\r\n",
+        "print(\"El promedio general de los números es:\",progen)\r\n",
+        "print(\"El promedio de los números positivos ingresados fue de\", propos)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Ingrese la cantidad de números que desea sumar\n",
+            "2\n",
+            "Ingrese el número 1° \n",
+            "5\n",
+            "Ingrese el número 2° \n",
+            "5\n",
+            "La cantidad de números positivos que ingreso fue de: 2\n",
+            "El promedio general de los números es: 5.0\n",
+            "El promedio de los números positivos ingresados fue de 5.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0sFwwrd7ZOs9",
+        "outputId": "dc107cce-453a-4142-c6e2-f91962158b10"
+      },
+      "source": [
+        "may=-100000\r\n",
+        "men=100000\r\n",
+        "n=int (input(\"Ingrese la cantidad de números a ingresar \\n\"))\r\n",
+        "i=1\r\n",
+        "for i in range (n):\r\n",
+        "  num= int (input(f\"Ingrese el número entero {i+1}° \\n\"))\r\n",
+        "  if (num>may):\r\n",
+        "    may=num\r\n",
+        "  else: \r\n",
+        "    if (num<men):\r\n",
+        "      men=num\r\n",
+        "    else:\r\n",
+        "      i=i+1\r\n",
+        "\r\n",
+        "print(\"El número mayor es:\",may)\r\n",
+        "print(\"El número menor es:\", men)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Ingrese la cantidad de números a ingresar \n",
+            "3\n",
+            "Ingrese el número entero 1° \n",
+            "5\n",
+            "Ingrese el número entero 2° \n",
+            "7\n",
+            "Ingrese el número entero 3° \n",
+            "4\n",
+            "El número mayor es: 7\n",
+            "El número menor es: 4\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x1XE_xW8ZXFH",
+        "outputId": "d05faaa1-c75d-4580-c978-03400c7d9747"
+      },
+      "source": [
+        "med=0\r\n",
+        "chi=0\r\n",
+        "gra=0\r\n",
+        "n=int (input(\"Ingrese la cantidad de ventas que realizo: \\n\"))\r\n",
+        "i=1\r\n",
+        "for i in range (n):\r\n",
+        "  v =float (input(f\"Ingrese el valor de la venta {i+1}\\n $\"))\r\n",
+        "  if (v<=200):\r\n",
+        "    chi=chi+1\r\n",
+        "  elif (v<400):\r\n",
+        "    med=med+1\r\n",
+        "  else:\r\n",
+        "    gra=gra+1\r\n",
+        "  i=i+1\r\n",
+        "\r\n",
+        "print(\"Usted realizo\",chi,\"ventas chicas\")\r\n",
+        "print(\"Usted realizo\",med,\"ventas medianas\")\r\n",
+        "print(\"Usted realizo\",gra,\"ventas grandes\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Ingrese la cantidad de ventas que realizo: \n",
+            "5\n",
+            "Ingrese el valor de la venta 1\n",
+            " $4\n",
+            "Ingrese el valor de la venta 2\n",
+            " $4\n",
+            "Ingrese el valor de la venta 3\n",
+            " $4\n",
+            "Ingrese el valor de la venta 4\n",
+            " $4\n",
+            "Ingrese el valor de la venta 5\n",
+            " $4\n",
+            "Usted realizo 5 ventas chicas\n",
+            "Usted realizo 0 ventas medianas\n",
+            "Usted realizo 0 ventas grandes\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 527
+        },
+        "id": "cLYa9vhgZhiZ",
+        "outputId": "5a7bc07a-b0b2-4cd1-c6af-e276c9b3dfcb"
+      },
+      "source": [
+        "num = int (input(\"Ingrese un número positivo y entero \"))\r\n",
+        "if (num>0):\r\n",
+        "  while (num!=0):\r\n",
+        "    print(f\"{num}\")\r\n",
+        "    help=-1**num\r\n",
+        "    if (help>0):\r\n",
+        "      num= div(num,2) \r\n",
+        "    else:\r\n",
+        "      num= num*3+1\r\n",
+        "    \r\n",
+        "  print(f\"{num}\")\r\n",
+        "\r\n",
+        "else:\r\n",
+        "  print(\"EL NÚMERO TIENE QUE SER POSITIVO Y ENTERO\\nPOR FAVOR, VERIFIQUE EL DATO DE ENTRADA\")"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    728\u001b[0m             \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 729\u001b[0;31m                 \u001b[0mident\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreply\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msession\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstdin_socket\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    730\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/jupyter_client/session.py\u001b[0m in \u001b[0;36mrecv\u001b[0;34m(self, socket, mode, content, copy)\u001b[0m\n\u001b[1;32m    802\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 803\u001b[0;31m             \u001b[0mmsg_list\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msocket\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv_multipart\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmode\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    804\u001b[0m         \u001b[0;32mexcept\u001b[0m \u001b[0mzmq\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mZMQError\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/sugar/socket.py\u001b[0m in \u001b[0;36mrecv_multipart\u001b[0;34m(self, flags, copy, track)\u001b[0m\n\u001b[1;32m    565\u001b[0m         \"\"\"\n\u001b[0;32m--> 566\u001b[0;31m         \u001b[0mparts\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mflags\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtrack\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtrack\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    567\u001b[0m         \u001b[0;31m# have first part already, only loop while more to receive\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket._recv_copy\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/backend/cython/checkrc.pxd\u001b[0m in \u001b[0;36mzmq.backend.cython.checkrc._check_rc\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: ",
+            "\nDuring handling of the above exception, another exception occurred:\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-17-31ad30c2ddce>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mnum\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Ingrese un número positivo y entero \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mnum\u001b[0m\u001b[0;34m>\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m   \u001b[0;32mwhile\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mnum\u001b[0m\u001b[0;34m!=\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"{num}\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m     \u001b[0mhelp\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m-\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m**\u001b[0m\u001b[0mnum\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    702\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    703\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 704\u001b[0;31m             \u001b[0mpassword\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mFalse\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    705\u001b[0m         )\n\u001b[1;32m    706\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    732\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    733\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 734\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    735\u001b[0m             \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    736\u001b[0m                 \u001b[0;32mbreak\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "58JGCww8Zqzi",
+        "outputId": "0f8c8dfc-4536-4044-9e8a-923d934bea0d"
+      },
+      "source": [
+        "serie=0\r\n",
+        "n= int (input(\"Ingrese un número entero\"))\r\n",
+        "i=1\r\n",
+        "for i in range (n+1):\r\n",
+        "  serie=serie+i**i\r\n",
+        "  i=i+1\r\n",
+        "print(f\"{serie}\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Ingrese un número entero5\n",
+            "3414\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TZ7Qi7mqZx87",
+        "outputId": "b4ade6c3-3763-42b1-f2f6-c6c099691f69"
+      },
+      "source": [
+        "pri=0\r\n",
+        "seg=1\r\n",
+        "i=3\r\n",
+        "for i in range (180):\r\n",
+        "  sig=pri+seg\r\n",
+        "  pri=seg\r\n",
+        "  seg=sig\r\n",
+        "  i=1+1\r\n",
+        "\r\n",
+        "print(f\"{sig}\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "30010821454963453907530667147829489881\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 544
+        },
+        "id": "vssK7tzaZ0Gi",
+        "outputId": "f9e3642d-4fc2-407e-f7f6-dbe322fbc00a"
+      },
+      "source": [
+        "can1=0\r\n",
+        "can2=0\r\n",
+        "can3=0\r\n",
+        "can4=0\r\n",
+        "print(\"Recuerde que solo hay 4 candidatos\")\r\n",
+        "voto= int (input(\"INGRESE EL NÚMERO DEL CANDIDATO\\nPARA EL QUE SERA SU VOTO \\n\"))\r\n",
+        "while (voto>0) and (voto<5):\r\n",
+        "  if (voto == 1):\r\n",
+        "    can1=can1+1\r\n",
+        "  elif (voto==2):\r\n",
+        "    can2=can2+1\r\n",
+        "  elif (voto==3):\r\n",
+        "    can3=can3+1\r\n",
+        "  elif (voto==4):\r\n",
+        "    can4=can4+1\r\n",
+        "  voto= int (input(\"\\nINGRESE EL NÚMERO DEL CANDIDATO\\nPARA EL QUE SERA SU VOTO \\n\"))\r\n",
+        "\r\n",
+        "sumv=can1+can2+can3+can4\r\n",
+        "por1=(can1/sumv)*100\r\n",
+        "por2=(can2/sumv)*100\r\n",
+        "por3=(can3/sumv)*100\r\n",
+        "por4=(can4/sumv)*100\r\n",
+        "\r\n",
+        "print(\"En total, se sumaron\",sumv,\"votos\")\r\n",
+        "print(\"Los votos que obtuvo el candidato #1 fueron\",can1,\"con un porcentaje del\",por1,\"%\")\r\n",
+        "print(\"Los votos que obtuvo el candidato #2 fueron\",can2,\"con un porcentaje del\",por2,\"%\")\r\n",
+        "print(\"Los votos que obtuvo el candidato #3 fueron\",can3,\"con un porcentaje del\",por3,\"%\")\r\n",
+        "print(\"Los votos que obtuvo el candidato #4 fueron\",can4,\"con un porcentaje del\",por4,\"%\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Recuerde que solo hay 4 candidatos\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    728\u001b[0m             \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 729\u001b[0;31m                 \u001b[0mident\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreply\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msession\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstdin_socket\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    730\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/jupyter_client/session.py\u001b[0m in \u001b[0;36mrecv\u001b[0;34m(self, socket, mode, content, copy)\u001b[0m\n\u001b[1;32m    802\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 803\u001b[0;31m             \u001b[0mmsg_list\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msocket\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv_multipart\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmode\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    804\u001b[0m         \u001b[0;32mexcept\u001b[0m \u001b[0mzmq\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mZMQError\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/sugar/socket.py\u001b[0m in \u001b[0;36mrecv_multipart\u001b[0;34m(self, flags, copy, track)\u001b[0m\n\u001b[1;32m    565\u001b[0m         \"\"\"\n\u001b[0;32m--> 566\u001b[0;31m         \u001b[0mparts\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mflags\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtrack\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtrack\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    567\u001b[0m         \u001b[0;31m# have first part already, only loop while more to receive\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket._recv_copy\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/backend/cython/checkrc.pxd\u001b[0m in \u001b[0;36mzmq.backend.cython.checkrc._check_rc\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: ",
+            "\nDuring handling of the above exception, another exception occurred:\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-10-9f18028d9238>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0mcan4\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Recuerde que solo hay 4 candidatos\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 6\u001b[0;31m \u001b[0mvoto\u001b[0m\u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"INGRESE EL NÚMERO DEL CANDIDATO\\nPARA EL QUE SERA SU VOTO \\n\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      7\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mvoto\u001b[0m\u001b[0;34m>\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mvoto\u001b[0m\u001b[0;34m<\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m   \u001b[0;32mif\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mvoto\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    702\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    703\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 704\u001b[0;31m             \u001b[0mpassword\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mFalse\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    705\u001b[0m         )\n\u001b[1;32m    706\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    732\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    733\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 734\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    735\u001b[0m             \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    736\u001b[0m                 \u001b[0;32mbreak\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tGGwMq5AaDuR",
+        "outputId": "fd3291df-bb31-4786-c6bb-82a51010d7a1"
+      },
+      "source": [
+        "masue=0\r\n",
+        "n= int (input(\"Ingrese la cantidad de empleados\"))\r\n",
+        "i=1\r\n",
+        "for i in range (n):\r\n",
+        "  print(f\"EMPLEADO NUMERO {i+1}\")\r\n",
+        "  numemp= int (input(\"Ingrese su número de trabajador\\n\"))\r\n",
+        "  sue= float (input(\"Ingrese su sueldo \\n$\"))\r\n",
+        "  if (sue>masue):\r\n",
+        "    masue= sue\r\n",
+        "    manum=numemp\r\n",
+        "  i=i+1\r\n",
+        "\r\n",
+        "print(\"El empleado con mayor sueldo es \",manum)\r\n",
+        "print(\"Con un sueldo de $\",masue)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Ingrese la cantidad de empleados2\n",
+            "EMPLEADO NUMERO 1\n",
+            "Ingrese su número de trabajador\n",
+            "1\n",
+            "Ingrese su sueldo \n",
+            "$5000\n",
+            "EMPLEADO NUMERO 2\n",
+            "Ingrese su número de trabajador\n",
+            "2\n",
+            "Ingrese su sueldo \n",
+            "$4000\n",
+            "El empleado con mayor sueldo es  1\n",
+            "Con un sueldo de $ 5000.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 527
+        },
+        "id": "syvBM6mBaNG-",
+        "outputId": "35c1cfbf-a8f4-4fa2-e5d8-7ce03f8bd029"
+      },
+      "source": [
+        "arsu=0\r\n",
+        "arno=0\r\n",
+        "mersu=500000\r\n",
+        "arce=0\r\n",
+        "i=1\r\n",
+        "for i in range (12):\r\n",
+        "  rno=float (input(f\"{i+1}.- Ingrese la cantidad de lluvias que hubo en la REGION NORTE\\n\"))\r\n",
+        "  rce=float (input(f\"{i+1}.- Ingrese la cantidad de lluvias que hubo en la REGION CENTRO\\n\"))\r\n",
+        "  rsu=float (input(f\"{i+1}.- Ingrese la cantidad de lluvias que hubo en la REGION SUR\\n\"))\r\n",
+        "  arno=arno+rno\r\n",
+        "  arce=arce+rce\r\n",
+        "  arsu=arsu+rsu\r\n",
+        "  if (rsu<mersu):\r\n",
+        "    mersu=rsu\r\n",
+        "    mes=i+1\r\n",
+        "  i=i+1\r\n",
+        "prorce=arce/12\r\n",
+        "print(\"El promedio de lluvia de la region centro es\",prorce,\"%\")\r\n",
+        "print(\"El mes con menor lluvia en la región sur fue\",mes)\r\n",
+        "print(\"Registro del mes:\",mersu)\r\n",
+        "\r\n",
+        "if (arno>arce):\r\n",
+        "  if (arno>arsu):\r\n",
+        "    print(\"La region con mayor lluvia es la region norte\")\r\n",
+        "  else: \r\n",
+        "    print(\"La region con mayor lluvia es la region sur\")\r\n",
+        "else:\r\n",
+        "  if (arce>arsu):\r\n",
+        "    print(\"La region con mayor lluvia es la region centro\")\r\n",
+        "  else:\r\n",
+        "    print(\"La region con mayot lluvia es la region sur\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    728\u001b[0m             \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 729\u001b[0;31m                 \u001b[0mident\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreply\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msession\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstdin_socket\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    730\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/jupyter_client/session.py\u001b[0m in \u001b[0;36mrecv\u001b[0;34m(self, socket, mode, content, copy)\u001b[0m\n\u001b[1;32m    802\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 803\u001b[0;31m             \u001b[0mmsg_list\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msocket\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv_multipart\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmode\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    804\u001b[0m         \u001b[0;32mexcept\u001b[0m \u001b[0mzmq\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mZMQError\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/sugar/socket.py\u001b[0m in \u001b[0;36mrecv_multipart\u001b[0;34m(self, flags, copy, track)\u001b[0m\n\u001b[1;32m    565\u001b[0m         \"\"\"\n\u001b[0;32m--> 566\u001b[0;31m         \u001b[0mparts\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrecv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mflags\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcopy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mcopy\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtrack\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtrack\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    567\u001b[0m         \u001b[0;31m# have first part already, only loop while more to receive\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket.Socket.recv\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32mzmq/backend/cython/socket.pyx\u001b[0m in \u001b[0;36mzmq.backend.cython.socket._recv_copy\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/zmq/backend/cython/checkrc.pxd\u001b[0m in \u001b[0;36mzmq.backend.cython.checkrc._check_rc\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: ",
+            "\nDuring handling of the above exception, another exception occurred:\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-12-56543b8e43af>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0mi\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;32mfor\u001b[0m \u001b[0mi\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mrange\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;36m12\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m   \u001b[0mrno\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mfloat\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"{i+1}.- Ingrese la cantidad de lluvias que hubo en la REGION NORTE\\n\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m   \u001b[0mrce\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mfloat\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"{i+1}.- Ingrese la cantidad de lluvias que hubo en la REGION CENTRO\\n\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m   \u001b[0mrsu\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mfloat\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"{i+1}.- Ingrese la cantidad de lluvias que hubo en la REGION SUR\\n\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    702\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    703\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 704\u001b[0;31m             \u001b[0mpassword\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mFalse\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    705\u001b[0m         )\n\u001b[1;32m    706\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.6/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    732\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    733\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 734\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    735\u001b[0m             \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    736\u001b[0m                 \u001b[0;32mbreak\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "-MmAv513aOSV"
+      },
+      "source": [
+        "ap1=0\r\n",
+        "ap2=0\r\n",
+        "ap3=0\r\n",
+        "ap4=0\r\n",
+        "ap5=0\r\n",
+        "recau=0\r\n",
+        "p1=float (input(\"Ingrese el precio de la localidad #1\\n $\"))\r\n",
+        "p2=float (input(\"Ingrese el precio de la localidad #2\\n $\"))\r\n",
+        "p3=float (input(\"Ingrese el precio de la localidad #3\\n $\"))\r\n",
+        "p4=float (input(\"Ingrese el precio de la localidad #4\\n $\"))\r\n",
+        "p5=float (input(\"Ingrese el precio de la localidad #5\\n $\"))\r\n",
+        "clave=int (input(\"Indique el número de la localidad que desea comprar\\n\"))\r\n",
+        "cant= int (input(\"¿Cuantos desea comprar?\\n\"))\r\n",
+        "while ((clave!=-1) and (cant!=-1)):\r\n",
+        "  if (clave<1) and (clave>4):\r\n",
+        "    print(\"No existe esa clave\")\r\n",
+        "  elif (clave==1):\r\n",
+        "    pre=p1*cant\r\n",
+        "    ap1=ap1+cant\r\n",
+        "  elif (clave==2):\r\n",
+        "    pre=p2*cant\r\n",
+        "    ap2=ap2+cant\r\n",
+        "  elif (clave==3):\r\n",
+        "    pre=p3*cant\r\n",
+        "    ap3=ap3+cant\r\n",
+        "  elif (clave==4):\r\n",
+        "    pre=p4*cant\r\n",
+        "    ap4=ap4+cant \r\n",
+        "  elif (clave==5):\r\n",
+        "    pre=p5*cant\r\n",
+        "    ap5=ap5+cant \r\n",
+        "\r\n",
+        "  print(\"CLAVE DE LOCALIDAD:\",clave,\"\\nCANTIDAD:\",cant,\"\\nPRECIO: $\",pre)  \r\n",
+        "  recau=recau+pre\r\n",
+        "  clave=int (input(\"Indique el número de la localidad que desea comprar\\n\"))\r\n",
+        "  cant= int (input(\"¿Cuantos desea comprar?\\n\"))\r\n",
+        "\r\n",
+        "print(\"Usted compro\",ap1, \"boletos tipo 1\")\r\n",
+        "print(\"Usted compro\",ap2, \"boletos tipo 2\")\r\n",
+        "print(\"Usted compro\",ap3, \"boletos tipo 3\")\r\n",
+        "print(\"Usted compro\",ap4, \"boletos tipo 4\")\r\n",
+        "print(\"Usted compro\",ap5, \"boletos tipo 5\")\r\n",
+        "print(\"Recaudacion del estado: $\",recau)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "H_nvXcjWaUPh"
+      },
+      "source": [
+        "cl=0\r\n",
+        "cuenta=0\r\n",
+        "print(\"TIPOS DE LLAMADAS\\nLOCAL=l   NACIONAL=n    INTERNACIONAL=i   SALIR=x   \")\r\n",
+        "tipo= str (input(\"Ingrese el tipo de llamada a realizar\\n\"))\r\n",
+        "dur= int (input(\"Indique la duracion de la llamada\\n\"))\r\n",
+        "while ((tipo!=\"x\") and (dur!=-1)):\r\n",
+        "  if (tipo==\"n\"):\r\n",
+        "    if (dur>3):\r\n",
+        "      costo=1.20+(dur-3)*0.48\r\n",
+        "    else:\r\n",
+        "      costo=1.20\r\n",
+        "    \r\n",
+        "  elif (tipo==\"l\"):\r\n",
+        "    cl=cl+1\r\n",
+        "    if (cl>50):\r\n",
+        "      costo=.60\r\n",
+        "    else:\r\n",
+        "      costo= 0\r\n",
+        "    \r\n",
+        "  elif (tipo==\"i\"):\r\n",
+        "    if (dur>3):\r\n",
+        "      costo=7.59+(dur-3)*3.03\r\n",
+        "    else:\r\n",
+        "      costo=7.59\r\n",
+        "\r\n",
+        "  cuenta=cuenta+costo\r\n",
+        "  tipo= str (input(\"Ingrese el tipo de llamada a realizar\\n\"))\r\n",
+        "  dur= int (input(\"Indique la duracion de la llamada\\n\"))\r\n",
+        "\r\n",
+        "print(f\"El total a pagar es ${cuenta}\")"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "v0GOoqALaYbe"
+      },
+      "source": [
+        "tipo1=0\r\n",
+        "tipo2=0\r\n",
+        "tipo3=0\r\n",
+        "tipo4=0\r\n",
+        "tipo5=0\r\n",
+        "mctipo2=0\r\n",
+        "\r\n",
+        "n= int (input(\"Ingrese el numero de años ha calcular\"))\r\n",
+        "i=1\r\n",
+        "for i in range (n):\r\n",
+        "  j=1\r\n",
+        "  totvin=0\r\n",
+        "  for j in range (5):\r\n",
+        "    v= float (input(f\"Cantidad de litros del vino {j+11} \"))\r\n",
+        "    totvin=totvin+v\r\n",
+        "    if (j==1):\r\n",
+        "      tipo1=tipo1+v\r\n",
+        "\r\n",
+        "    elif (j==2):\r\n",
+        "      tipo2=tipo2+v\r\n",
+        "      if (v >mctipo2):\r\n",
+        "        mctipo2=v\r\n",
+        "        año=i\r\n",
+        "        \r\n",
+        "    elif (j==3):\r\n",
+        "      tipo3=tipo3+v\r\n",
+        "      if (v==0):\r\n",
+        "        print(f\"En el año {i+1} no se produjo vino tipo 3 \")\r\n",
+        "    \r\n",
+        "    elif (j==4):\r\n",
+        "      tipo4=tipo4+v\r\n",
+        "    \r\n",
+        "    elif (j==5):\r\n",
+        "      tipo5=tipo5+v\r\n",
+        "\r\n",
+        "  j=j+1\r\n",
+        "\r\n",
+        "print(f\"Total tipo 1:{tipo1} \")\r\n",
+        "print(f\"Total tipo 2:{tipo2} \")\r\n",
+        "print(f\"Total tipo 3:{tipo3} \")\r\n",
+        "print(f\"Total tipo 4:{tipo4} \")\r\n",
+        "print(f\"Total tipo 5:{tipo5} \")\r\n",
+        "print(f\"Año en que se produjo mayor cantidad de vino tipo 2: {año}\\n Litros: {mctipo2} L.\")"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Nl4RzjhaacNr"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
